@@ -10,7 +10,7 @@ new WebpackCrx({
               dest: 'dist',
               name: 'outputfile'
           })
-```
+````
 
 Options:
 `key` (optiona)
