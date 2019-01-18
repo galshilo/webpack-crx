@@ -1,0 +1,20 @@
+{
+  "name": "webpack-crx",
+  "version": "1.0.1",
+  "description": "A webpack plugin to package chrome extensions",
+  "homepage": "https://github.com/galshilo/webpack-crx",
+  "main": "index.js",
+  "author": "Gal Shilo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:galshilo/webpack-crx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/galshilo/webpack-crx/issues"
+  },
+  "dependencies": {
+    "basic": "^2.0.3",
+    "keypair": "^1.0.1"
+  }
+}
