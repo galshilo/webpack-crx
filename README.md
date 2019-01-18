@@ -13,11 +13,19 @@ new WebpackCrx({
 ````
 
 Options:
-`key` (optiona)
+
+ `key` (optional)
+ 
   Path to pem key file. If no key is provided, a temp key will be generated for the packing process.
+  
  `src`
+
   folder containing the extension files.
+        
  `dest`
+    
   destination output folder.
+  
  `name`
+ 
   output file name
