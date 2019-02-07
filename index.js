@@ -44,7 +44,7 @@ WebpackCrxPlugin.prototype.pack = function () {
             }
             fs.writeFileSync(this.updateFile, updateXML);
             fs.writeFileSync(this.crxFile, crxBuffer);
-            fs.unlinkSync(this.tempKey);
+            fs.unlinkSync(this.key);
         })
         .catch(err => {
             console.log(err);
