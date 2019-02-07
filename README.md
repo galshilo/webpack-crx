@@ -2,10 +2,9 @@
 pack chrome extensions
 
 ````
-javascript
 const WebpackCrx = require("webpack-crx");
 new WebpackCrx({
-              key: 'ey.pem',
+              key: 'key.pem',
               src: 'build',
               dest: 'dist',
               name: 'outputfile'
