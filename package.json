@@ -1,6 +1,6 @@
 {
   "name": "webpack-crx",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A webpack plugin to package chrome extensions",
   "homepage": "https://github.com/galshilo/webpack-crx",
   "main": "index.js",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "basic": "^2.0.3",
+    "crx": "^4.0.1",
     "keypair": "^1.0.1"
   }
 }
