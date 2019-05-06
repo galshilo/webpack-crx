@@ -43,13 +43,14 @@ WebpackCrxPlugin.prototype.pack = function () {
                 fs.mkdirSync(this.dest);
             }
             fs.writeFileSync(this.updateFile, updateXML);
+            console.info(`Saving CRX file to ${this.crxFile}`);
             fs.writeFileSync(this.crxFile, crxBuffer);
             if (fs.existsSync(this.tempKey)) {
                 fs.unlinkSync(this.tempKey);
             }
         })
         .catch(err => {
-            console.log(err);
+            console.error(err);
         });
 };
 
