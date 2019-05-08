@@ -20,6 +20,7 @@ function WebpackCrxPlugin(options) {
     this.dest = path.resolve(__dirname, this.options.dest);
     this.updateFile = path.resolve(__dirname, this.dest, options.updateFile || "update.xml");
     this.crxFile = path.resolve(__dirname, path.join(this.dest, this.outputFileName));
+    this.version = options.version || 3;
 }
 
 WebpackCrxPlugin.prototype.apply = function (compiler) {
@@ -32,7 +33,8 @@ WebpackCrxPlugin.prototype.apply = function (compiler) {
 WebpackCrxPlugin.prototype.pack = function () {
     const crx = new ChromeExtension({
         codebase: `http://localhost:8000/${this.outputFileName}`,
-        privateKey: fs.readFileSync(this.key)
+        privateKey: fs.readFileSync(this.key),
+        version: this.version
     });
 
     crx.load(this.src)
