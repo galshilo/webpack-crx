@@ -25,7 +25,7 @@ function WebpackCrxPlugin(options) {
 
 WebpackCrxPlugin.prototype.apply = function (compiler) {
     let self = this;
-    return compiler.plugin('done', function () {
+    compiler.hooks.done.tap("done", () => {
         self.pack.call(self);
     });
 };
